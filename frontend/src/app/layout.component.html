@@ -1,2 +1,16 @@
-<h1>layout</h1>
+<div class="col-sm-12 no-padding">
+  <div class="col-sm-12 row no-gutters background-color-secondary">
+    <div class="col-sm-6">
+      <h1 class="d-inline-block">Rolling Thunder</h1>
+      <div class="d-inline-block pl-3">releasing software simplified</div>
+    </div>
+    <div class="col-sm-6 d-flex flex-row align-items-center justify-content-end">
+      <a href="https://github.com/CanadianCommander/rollingthunder" title="source code">
+        <img class="" src="assets/images/GitHub-Mark-Light-32px.png"></a>
+    </div>
+  </div>
+  <div class="col-sm-12 no-gutters background-color-pop">
+    <app-bread-crumb [locationUrl]="locationService.path()"></app-bread-crumb>
+  </div>
+</div>
 <router-outlet></router-outlet>

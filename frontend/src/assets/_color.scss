@@ -1,14 +1,38 @@
 
 // color defs
-$color-bg: #3a3a3a;
+$color-bg-primary: #3a3a3a;
+$color-bg-secondary: #1e1e1e;
 
 $color-text-primary: #ffffff;
+$color-text-primary-highlight: #e1e1e1;
 
 $color-pop: #ff4146;
 
-// global color styles
+// color classes
+.background-color-primary {
+  background-color: $color-bg-primary;
+}
 
-body {
-  background-color: $color-bg;
-  color: $color-text-primary;
+.background-color-secondary {
+  background-color: $color-bg-secondary;
+}
+
+.background-color-pop {
+  background-color: $color-pop;
+}
+
+// global color defaults
+html {
+  body {
+    background-color: $color-bg-primary;
+    color: $color-text-primary;
+
+    a {
+      color: $color-text-primary;
+
+      &:hover {
+        color: $color-text-primary-highlight;
+      }
+    }
+  }
 }

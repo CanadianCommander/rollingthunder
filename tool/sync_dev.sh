@@ -7,5 +7,5 @@ fi
 
 while true; do
   inotifywait -r -e modify,create,delete ${1}
-  rsync -avz ${1} ${2}
+  rsync -avz --delete ${1} ${2}
 done
