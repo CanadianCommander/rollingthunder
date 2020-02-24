@@ -23,9 +23,10 @@ module.exports = {
 		'@typescript-eslint'
 	],
 	'rules': {
-		'indent': [
+		'vue/script-indent': [
 			'error',
-			'tab'
+			'tab',
+			{'baseIndent': 1}
 		],
 		'linebreak-style': [
 			'error',

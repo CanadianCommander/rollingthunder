@@ -1,24 +1,31 @@
 <template>
   <div id="app">
-    <h1>Rolling Thunder</h1>
+			<Header></Header>
+			<Dashboard></Dashboard>
   </div>
 </template>
 
 <script>
+	import Dashboard from './views/dashboard/Dashboard';
+	import GlobalHeader from './components/GlobalHeader';
 
-export default {
-	name: 'App',
-	components: {}
-};
+	export default {
+		name: 'App',
+		components: {
+			Dashboard: Dashboard,
+			Header: GlobalHeader,
+		}
+	};
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+		min-height: 100%;
+  color: $color-text-primary;
+		background-color: $color-background-primary;
 }
 </style>
+

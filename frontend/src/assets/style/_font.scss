@@ -1,0 +1,49 @@
+$header-size: 36px;
+$subheader-size: 18px;
+$text-size: 12px;
+
+@mixin header-font($text-color, $size)
+{
+	color: $text-color;
+	font-size: $size;
+}
+
+@mixin body-font($text-color, $size)
+{
+	color: $text-color;
+	font-size: $size;
+}
+
+@mixin text-primary()
+{
+	@include body-font($color-text-primary, $text-size);
+}
+
+@mixin text-secondary()
+{
+	@include body-font($color-text-secondary, $text-size);
+}
+
+@mixin header-primary()
+{
+	@include header-font($color-text-primary, $header-size);
+}
+
+@mixin subheader-primary()
+{
+	@include header-font($color-text-primary, $subheader-size);
+}
+
+@mixin subheader-secondary()
+{
+	@include header-font($color-text-secondary, $subheader-size);
+}
+
+
+h1 {
+	@include header-primary;
+}
+
+h2 {
+	@include subheader-primary;
+}
