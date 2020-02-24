@@ -1,3 +1,9 @@
 @import '~bootstrap';
 @import 'color';
 @import 'font';
+
+// move all content above background layer.
+div {
+	position: relative;
+	z-index: 1;
+}

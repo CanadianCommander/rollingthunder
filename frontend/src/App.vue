@@ -1,7 +1,10 @@
 <template>
-  <div id="app">
+  <div id="app" class="d-flex flex-column">
 			<Header></Header>
-			<Dashboard></Dashboard>
+			<div class="position-relative flex-grow flex-fill">
+				<img class="bomber-logo" src="@/assets/img/BomberLogo.png">
+				<Dashboard></Dashboard>
+			</div>
   </div>
 </template>
 
@@ -25,7 +28,17 @@
   -moz-osx-font-smoothing: grayscale;
 		min-height: 100%;
   color: $color-text-primary;
-		background-color: $color-background-primary;
+	background-color: $color-background-primary;
+
+	.bomber-logo {
+		position: absolute;
+		width: 206px;
+		height: 137px;
+		z-index: 0;
+		left: calc(50% - 103px);
+		top: calc(50% - 68px);
+	}
 }
 </style>
+
 

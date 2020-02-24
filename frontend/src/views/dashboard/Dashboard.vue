@@ -1,5 +1,7 @@
 <template>
-	<h1></h1>
+	<div>
+		<h2>Bla bla bla</h2>
+	</div>
 </template>
 <script>
 	import Vue from 'vue';
