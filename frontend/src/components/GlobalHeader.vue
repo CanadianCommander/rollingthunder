@@ -17,9 +17,9 @@
 	</div>
 </template>
 
-<script>
-	import Vue from 'vue';
-	import Component from 'vue-class-component';
+<script lang="ts">
+	import Vue from "vue";
+	import Component from "vue-class-component";
 
 	@Component({})
 	export default class GlobalHeader extends Vue

@@ -8,12 +8,12 @@
   </div>
 </template>
 
-<script>
-	import Dashboard from './views/dashboard/Dashboard';
-	import GlobalHeader from './components/GlobalHeader';
+<script lang="ts">
+	import Dashboard from "./views/dashboard/Dashboard";
+	import GlobalHeader from "./components/GlobalHeader";
 
 	export default {
-		name: 'App',
+		name: "App",
 		components: {
 			Dashboard: Dashboard,
 			Header: GlobalHeader,
