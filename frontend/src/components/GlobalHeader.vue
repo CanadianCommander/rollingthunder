@@ -11,6 +11,9 @@
 				</a>
 			</div>
 		</div>
+		<div class="row">
+			<BasicTabBar :labels="[{label: 'hello', route: 'fizbang'}]"></BasicTabBar>
+		</div>
 		<div class="col-md-12">
 
 		</div>
@@ -18,10 +21,14 @@
 </template>
 
 <script lang="ts">
-	import Vue from "vue";
-	import Component from "vue-class-component";
+	import { Component, Vue } from "vue-property-decorator";
+	import BasicTabBar from "@/components/BasicTabBar.vue";
 
-	@Component({})
+	@Component({
+		components: {
+			BasicTabBar
+		}
+	})
 	export default class GlobalHeader extends Vue
 	{
 

@@ -7,15 +7,14 @@
 </template>
 
 <script lang="ts">
-	import Vue from "vue";
-	import Component from "vue-class-component";
-	import {Prop} from "vue-property-decorator";
-	//import RouteLabel from "../lib/model/RouteLabel";
+	import { Vue, Prop, Component } from "vue-property-decorator";
+	import RouteLabel from "../lib/model/RouteLabel";
 
 	@Component({})
 	export default class BasicTabBar extends Vue
 	{
-		@Prop(String) labels: string;
+		@Prop()
+		labels: RouteLabel[] = [];
 	}
 </script>
 
