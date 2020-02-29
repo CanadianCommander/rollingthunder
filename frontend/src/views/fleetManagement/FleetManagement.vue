@@ -1,17 +1,22 @@
 <template>
-	<h2 class="text-center">
-		Dashboard
-	</h2>
+	<div>
+		<h2 class="text-center">
+			Fleet Management
+		</h2>
+		<router-view/>
+	</div>
 </template>
+
 <script lang="ts">
 	import { Component, Vue } from "vue-property-decorator";
 
 	@Component({})
-	export default class Dashboard extends Vue
+	export default class FleetManagement extends Vue
 	{
 
 	}
 </script>
 
 <style lang="scss" scoped>
+
 </style>

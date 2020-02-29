@@ -14,7 +14,7 @@
 				</a>
 			</div>
 		</div>
-		<BasicTabBar :labels="getHeaderTabs()"/>
+		<BasicTabBar :labels="getHeaderTabs()" :default-tab="getSelectedTab()"/>
 	</div>
 </template>
 
@@ -32,13 +32,28 @@
 		getHeaderTabs()
 		{
 			return [
-				{label: "Dashboard", route: {name: "dashboard"}},
-				{label: "Release Plans", route: {name: "releasePlans"}},
-				{label: "Release History", route: {name: "releaseHistory"}},
-				{label: "Fleet Management", route: {name: "feetManagement"}},
-				{label: "Monitor", route: {name: "monitor"}},
-				{label: "Actions", route: {name: "actions"}},
+				{label: "Dashboard", routeName: "dashboard"},
+				{label: "Release Plans", routeName: "releasePlans"},
+				{label: "Release History", routeName: "releaseHistory"},
+				{label: "Fleet Management", routeName: "fleetManagement"},
+				{label: "Monitor", routeName: "monitor"},
+				{label: "Account Settings", routeName: "accountSettings"},
 			];
+		}
+
+		getSelectedTab()
+		{
+			let headerTabs = this.getHeaderTabs();
+
+			let index = 0;
+			for (let tab of headerTabs)
+			{
+				if (tab.routeName === this.$router.currentRoute.name)
+				{
+					return index;
+				}
+				index++;
+			}
 		}
 	}
 </script>

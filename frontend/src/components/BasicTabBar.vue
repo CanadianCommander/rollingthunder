@@ -48,8 +48,11 @@
 
 		doRoute(label: any)
 		{
-			console.log(label.route);
 			this.activeTab = label;
+			if (this.$router.currentRoute.name != label.routeName)
+			{
+				this.$router.push({name: label.routeName});
+			}
 		}
 
 		onScreenSizeChange(data?: any)

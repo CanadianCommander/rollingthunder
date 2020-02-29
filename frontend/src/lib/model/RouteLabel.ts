@@ -1,11 +1,11 @@
 export default class RouteLabel
 {
 	public label: string = "";
-	public route: any = null;
+	public routeName: string = "";
 
-	public constructor(label: string, route:any)
+	public constructor(label: string, routeName: string)
 	{
 		this.label = label;
-		this.route = route;
+		this.routeName = routeName;
 	}
 }

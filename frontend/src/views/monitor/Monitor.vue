@@ -1,17 +1,19 @@
 <template>
 	<h2 class="text-center">
-		Dashboard
+		Monitor
 	</h2>
 </template>
+
 <script lang="ts">
 	import { Component, Vue } from "vue-property-decorator";
 
 	@Component({})
-	export default class Dashboard extends Vue
+	export default class Monitor extends Vue
 	{
 
 	}
 </script>
 
 <style lang="scss" scoped>
+
 </style>

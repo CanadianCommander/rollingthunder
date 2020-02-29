@@ -3,7 +3,7 @@
 		<Header/>
 		<div class="position-relative flex-grow flex-fill">
 			<img class="bomber-logo" src="@/assets/img/BomberLogo.png" alt="Bomber Logo">
-			<Dashboard/>
+			<router-view/>
 		</div>
 	</div>
 </template>

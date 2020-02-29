@@ -17,7 +17,8 @@
     "typescript": "^3.8.2",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
-    "vue-property-decorator": "^8.4.0"
+    "vue-property-decorator": "^8.4.0",
+    "vue-router": "^3.1.6"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.18.0",
@@ -52,31 +53,42 @@
     },
     "rules": {
       "no-tabs": 0,
-      "indent": ["error","tab"],
+      "indent": [
+        "error",
+        "tab"
+      ],
       "vue/script-indent": [
         "error",
         "tab",
-        {"baseIndent": 1}
+        {
+          "baseIndent": 1
+        }
       ],
       "vue/html-indent": [
         "error",
         "tab",
-        {"baseIndent": 1}
+        {
+          "baseIndent": 1
+        }
       ],
-      "vue/html-closing-bracket-spacing": [ "warn",
+      "vue/html-closing-bracket-spacing": [
+        "warn",
         {
           "startTag": "never",
           "endTag": "never",
           "selfClosingTag": "never"
         }
       ],
-      "vue/html-closing-bracket-newline": ["warn",
+      "vue/html-closing-bracket-newline": [
+        "warn",
         {
           "singleline": "never",
           "multiline": "never"
         }
       ],
-      "vue/max-attributes-per-line": ["warn", {
+      "vue/max-attributes-per-line": [
+        "warn",
+        {
           "singleline": 4,
           "multiline": {
             "max": 4,
@@ -99,7 +111,9 @@
     },
     "overrides": [
       {
-        "files": ["*.vue"],
+        "files": [
+          "*.vue"
+        ],
         "rules": {
           "indent": "off"
         }
