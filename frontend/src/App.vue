@@ -1,22 +1,22 @@
 <template>
 	<div id="app" class="d-flex flex-column">
-		<Header></Header>
+		<Header/>
 		<div class="position-relative flex-grow flex-fill">
-			<img class="bomber-logo" src="@/assets/img/BomberLogo.png">
-			<Dashboard></Dashboard>
+			<img class="bomber-logo" src="@/assets/img/BomberLogo.png" alt="Bomber Logo">
+			<Dashboard/>
 		</div>
 	</div>
 </template>
 
 <script lang="ts">
-	import Dashboard from './views/dashboard/Dashboard.vue';
-	import GlobalHeader from './components/GlobalHeader.vue';
-	import { Component, Vue } from 'vue-property-decorator';
+	import Dashboard from "./views/dashboard/Dashboard.vue";
+	import GlobalHeader from "./components/GlobalHeader.vue";
+	import { Component, Vue } from "vue-property-decorator";
 
 	@Component({
 		components: {
 			Dashboard,
-			'Header': GlobalHeader,
+			"Header": GlobalHeader,
 		},
 	})
 	export default class App extends Vue {}

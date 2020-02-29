@@ -63,8 +63,25 @@
         "tab",
         {"baseIndent": 1}
       ],
-      "vue/max-attributes-per-line": ["warn",{
-          "singline": 4
+      "vue/html-closing-bracket-spacing": [ "warn",
+        {
+          "startTag": "never",
+          "endTag": "never",
+          "selfClosingTag": "never"
+        }
+      ],
+      "vue/html-closing-bracket-newline": ["warn",
+        {
+          "singleline": "never",
+          "multiline": "never"
+        }
+      ],
+      "vue/max-attributes-per-line": ["warn", {
+          "singleline": 4,
+          "multiline": {
+            "max": 4,
+            "allowFirstLine": true
+          }
         }
       ],
       "linebreak-style": [

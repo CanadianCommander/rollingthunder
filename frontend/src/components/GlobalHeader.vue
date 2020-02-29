@@ -6,17 +6,15 @@
 				<h2>Releasing software simplified!</h2>
 			</div>
 			<div class="col-sm-1 d-flex align-items-center justify-content-center">
-				<a href="https://github.com/CanadianCommander/rollingthunder" title="Source on GitHub">
-					<img class="github-img" src="@/assets/img/GitHub-Mark-Light-64px.png">
+				<a href="https://github.com/CanadianCommander/rollingthunder"
+					title="Source on GitHub">
+					<img class="github-img"
+						src="@/assets/img/GitHub-Mark-Light-64px.png"
+						alt="Github Link">
 				</a>
 			</div>
 		</div>
-		<div class="row">
-			<BasicTabBar :labels="[{label: 'hello', route: 'fizbang'}]"></BasicTabBar>
-		</div>
-		<div class="col-md-12">
-
-		</div>
+		<BasicTabBar :labels="getHeaderTabs()"/>
 	</div>
 </template>
 
@@ -31,7 +29,17 @@
 	})
 	export default class GlobalHeader extends Vue
 	{
-
+		getHeaderTabs()
+		{
+			return [
+				{label: "Dashboard", route: {name: "dashboard"}},
+				{label: "Release Plans", route: {name: "releasePlans"}},
+				{label: "Release History", route: {name: "releaseHistory"}},
+				{label: "Fleet Management", route: {name: "feetManagement"}},
+				{label: "Monitor", route: {name: "monitor"}},
+				{label: "Actions", route: {name: "actions"}},
+			];
+		}
 	}
 </script>
 
@@ -40,7 +48,7 @@
 		background-color: $color-background-secondary;
 
 		h2 {
-			@include subheader-secondary();
+			@include subheader-primary();
 			display: inline-block;
 			margin: 10px 0 10px 0;
 		}
