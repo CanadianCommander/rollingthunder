@@ -66,15 +66,10 @@
 	h2 {
 		@include subheader-secondary();
 		margin-bottom: 0;
-
-		&:hover {
-			color: $color-text-secondary-link-hover;
-			text-decoration: none;
-		}
 	}
 
 	.tab-row {
-		background-color: $color-pop;
+		background-color: $color-background-transition;
 	}
 
 	.tab-item {
@@ -86,11 +81,6 @@
 			background-color: $color-background-primary;
 			h2 {
 				color: $color-text-primary;
-
-				&:hover {
-					color: $color-text-primary-link-hover;
-					text-decoration: none;
-				}
 			}
 		}
 	}

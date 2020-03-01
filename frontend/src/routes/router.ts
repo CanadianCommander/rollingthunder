@@ -5,6 +5,7 @@ import releaseHistoryRoutes from "@/routes/releaseHistoryRoutes";
 import fleetManagementRoutes from "@/routes/fleetManagementRoutes";
 import monitorRoutes from "@/routes/monitorRoutes";
 import accountSettingsRoutes from "@/routes/accountSettingsRoutes";
+import authRoutes from "@/routes/authRoutes";
 
 const routes = [
 	...dashboardRoutes,
@@ -13,6 +14,7 @@ const routes = [
 	...fleetManagementRoutes,
 	...monitorRoutes,
 	...accountSettingsRoutes,
+	...authRoutes,
 ];
 
 export const vueRouter = new VueRouter({routes});

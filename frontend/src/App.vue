@@ -1,7 +1,7 @@
 <template>
 	<div id="app" class="d-flex flex-column">
-		<Header/>
-		<div class="position-relative flex-grow flex-fill">
+		<Header class="container-fluid"/>
+		<div class="container-fluid position-relative flex-grow flex-fill d-flex flex-column">
 			<img class="bomber-logo" src="@/assets/img/BomberLogo.png" alt="Bomber Logo">
 			<router-view/>
 		</div>

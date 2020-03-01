@@ -1,0 +1,18 @@
+
+a {
+	color: $color-text-link;
+
+	&:hover {
+		color: $color-pop-active;
+	}
+}
+
+.button {
+	border-style: none;
+	border-radius: 6px;
+	font-weight: bold;
+
+	&:focus {
+		outline: none;
+	}
+}

@@ -5,7 +5,7 @@
 				<h1>Rolling Thunder</h1>
 				<h2>Releasing software simplified!</h2>
 			</div>
-			<div class="col-sm-1 d-flex align-items-center justify-content-center">
+			<div class="col-sm-1 d-flex align-items-center justify-content-end">
 				<a href="https://github.com/CanadianCommander/rollingthunder"
 					title="Source on GitHub">
 					<img class="github-img"
@@ -14,21 +14,35 @@
 				</a>
 			</div>
 		</div>
-		<BasicTabBar :labels="getHeaderTabs()" :default-tab="getSelectedTab()"/>
+		<div v-if="showTabs" class="row">
+			<div class="col-md-10">
+				<BasicTabBar :labels="getHeaderTabs()" :default-tab="getSelectedTab()"/>
+			</div>
+			<div class="color-background-transition col-md-2 d-flex flex-row align-items-center justify-content-end">
+				<Button class="button-secondary" @click="doLogout()">
+					Logout
+				</Button>
+			</div>
+		</div>
 	</div>
 </template>
 
 <script lang="ts">
-	import { Component, Vue } from "vue-property-decorator";
+	import { Component, Vue, Watch } from "vue-property-decorator";
 	import BasicTabBar from "@/components/BasicTabBar.vue";
+	import { Route } from "vue-router";
+	import Button from "@/components/Button.vue";
 
 	@Component({
 		components: {
-			BasicTabBar
+			BasicTabBar,
+			Button,
 		}
 	})
 	export default class GlobalHeader extends Vue
 	{
+		private showTabs = true;
+
 		getHeaderTabs()
 		{
 			return [
@@ -54,6 +68,25 @@
 				}
 				index++;
 			}
+		}
+
+		@Watch("$route", { immediate: true, deep: true})
+		onRouteChange(newRoute: Route)
+		{
+			if (newRoute.name != null)
+			{
+				this.showTabs = !["login"].includes(newRoute.name);
+			}
+			else
+			{
+				this.showTabs = true;
+			}
+		}
+
+		doLogout()
+		{
+			//TODO real logout
+			this.$router.push({name: "login"});
 		}
 	}
 </script>

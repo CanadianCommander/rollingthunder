@@ -8,6 +8,7 @@
     "dev": "vue-cli-service serve --port 4200"
   },
   "dependencies": {
+    "@types/uuid": "^7.0.0",
     "@typescript-eslint/eslint-plugin": "^2.20.0",
     "@typescript-eslint/parser": "^2.20.0",
     "bootstrap": "^4.4.1",
